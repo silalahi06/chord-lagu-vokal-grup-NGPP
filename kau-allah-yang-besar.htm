@@ -1,0 +1,388 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style type="text/css">
+		body {	
+		font-family: Verdana, Arial, sans-serif;
+        font-size: .8em;
+        background-color: black;
+        color: white;
+    		}
+		div.song > p {line-height:2;margin:15px 0px 15px 0px;}
+		span.chord {position:absolute;line-height:0;font-weight:bold;}
+		span.chord-inline {font-weight:bold;}
+		div.transposition a.transposition {margin:5px; color: white}
+		div.song div.transposition {margin-bottom:5px;}
+
+		p {
+	line-height: 17px;
+	margin: 11px 0 10px 0;
+	padding: 0px;
+}
+
+h2 {
+	color: #73353A;
+	margin:0px;
+	padding:0px;
+	font-size: 15px;
+}
+
+ul {
+	font-size: 10px;
+	margin:0;
+	padding:0;
+	list-style-image: url(img/bullet.gif);
+}
+
+a {
+	color: #8B0000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+blockquote{
+	background: #F7FDE3;
+	color: #606060;
+	padding: 10px;
+}
+
+
+/**** Main Container ***/
+
+
+#wrap {
+       margin-left: auto;
+       margin-right: auto;
+       width: 730px;
+}
+
+
+/**** Top ***/
+
+
+#top {
+	width: 100%;
+	height: 88px;
+	color: #fff;
+	background: #000 url(img/top_bg.gif);
+	overflow:hidden;
+}
+
+#top h2 {
+	color: White;
+	letter-spacing: 3px;
+	font-size: 2.4em;
+	font-weight: normal;
+	position: relative;
+	margin: 0px;
+	top:33px;
+	display:block;
+	float:left;
+	background: url(img/logo.jpg) no-repeat;
+	padding-left: 40px;
+}
+
+#top h2 a {
+	color: white;
+	text-decoration: none;
+}
+
+#top h2 a:hover {
+        color: #FF5938;
+}
+
+
+/**** Main Menu ***/
+
+
+#menu {
+	display: block;
+	float:right;
+}
+
+#menu ul {
+	margin: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+
+#menu li a {
+	display: block;
+	padding: 55px 20px 12px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+* html #menu a {width:1%;}
+
+#menu li a:hover {
+	background: #FF5938;
+}
+
+#menu li a.current {
+	letter-spacing: 1px;
+	color: gray;
+}
+
+#menu li a.current:hover {
+	color: #fff;
+}
+
+
+/**** Content Container ***/
+
+
+#content {
+	width: 100%;
+	margin-top:30px;
+}
+
+#content h2 {
+	margin: 0;
+	padding: 10px 0 10px 0;
+}
+
+
+/**** Content ***/
+
+
+#left ul {
+	padding: 15px 0 15px 35px;
+	margin:0;
+}
+
+#left li {
+	margin-bottom:5px;
+}
+
+#left {
+	width: 350px;
+	float:left;
+	display: block;
+        margin-left: 20px;
+	display: inline;
+}
+
+
+/**** Sidebar ***/
+
+
+#right {
+	width: 315px;
+	float: right;
+	display:block;
+	margin-top: 10px;
+}
+
+#right .box {
+	width: 280px;
+	background: #F6F9FB;
+	border: 1px solid #E1E1E1;
+	padding:10px 10px 15px 10px;
+	float: right;
+}
+
+#right .box h2 {
+	font-size: 1.1em;
+	margin: 0px 0 0px 0;
+	padding:0px 0 5px 0;
+}
+
+#right .box a {
+	margin: 10px 0 10px 0;
+	color: #56677C;
+	font-size: 10px;
+}
+
+#right .box p {
+	margin: 5px 0 10px 0;
+	line-height: 15px;
+}
+
+#right .box ul {
+	padding: 0 0 7px 20px;
+	margin:10px 0 10px 0;
+}
+
+#right .box li {
+	margin-top:5px;
+}
+
+
+/**** Clear Div ***/
+
+
+#clear {
+	display: block;
+	clear: both;
+	width: 100%;
+	height:1px;
+	overflow:hidden;
+}
+
+
+/**** Footer ***/
+
+
+#footer {
+        margin: 40px auto 0 auto;
+	text-align: center;
+	border-top: dotted 1px gray;
+	padding: 20px 0 20px 0;
+	width: 70%;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 0;
+}
+
+	</style>
+</head>
+<body>
+	<h3>Kau Allah Yang Besar</h3>
+
+
+	<div class="song">
+
+		<div class="transposition"></div>
+
+
+		<p>{_G-}{_F#m-}{_D-}{_C}{ }{_D}{ }{_G}{   }{_G-}{_F#m-}{_D-}{_C}{ }{_D}{ }{_Em}{   }{_F}{ }{_D}</p>
+
+		<p>{G}Ye{F#m}sus, T{D}uh{C}an, Kau l{D}ayak dip{G}uji<br/>
+			{G}Di{F#m}tinggi{D}kan{C} atas s'{D}luruh bu{Em}mi<br/>
+			{F}Ajaib kuasaMu y{D}a Allah{G}ku<br/>
+			'Ku k{Am}agum horm{C}at pada{D}Mu<br/></p>
+
+			<p>{G}Ye{F#m}sus, T{D}uh{C}an, Kau l{D}ayak dip{G}uji<br/>
+			{G}Di{F#m}tinggi{D}kan{C} atas s'{D}luruh bu{Em}mi<br/>
+			{F}Heran kasihMu d{D}i hidupk{G}u<br/>
+			Y{Am}esus kek{C}uatan{D-}ku {Bm-}{   }{D-}{  }{Em-}{   }{D}<br/></p>
+
+			<p>Kau Allah y{G}ang b{Am-}esar{B} ajaib dan {Em}mulia{D}<br/>
+				Kau Ye{Am}sus yang s'l{C}alu membuatku {Bm-}terpe{C-}so{D-}na{Am-}{   }{D}<br/>
+				S'gala{G} puj{Am-}ian b{B}agiMu y{Em}a Tuhan{D}<br/>
+				Hanya {Am}Kau yang layak{D} ku agungkan{G-}{  }{Am-}{   }{Bm-}{   }{Em-}{   }{D}<br/></p>
+
+				<p>Kau Allah y{G}ang b{Am-}esar{B} ajaib dan {Em}mulia{D}<br/>
+				Kau Ye{Am}sus yang s'l{C}alu membuatku {Bm-}terpe{C-}so{D-}na{Am-}{   }{D}<br/>
+				S'gala{G} puj{Am-}ian b{B}agiMu y{Em}a Tuhan{D}<br/>
+				Hanya {Am}Kau yang layak{D} ku agungkan{G}<br/></p>		
+
+				<p>
+					{_G}{ }{_Bm}{ }{_C}{ }{_D}{  }{_G}{ }{_Bm}{ }{_C}{ }{_D}{  }{_Em}{ }{_D}{ }{_G}{ }{_C}{ }{_G}{ }{_D}{ }{_G}
+				</p>
+
+				<p>Ending:{ }{_C}{ }{_Bm}{ }{_Am-}{_G-}{_D-}{_G}
+				</p>
+
+
+			</div>
+			<script type="text/javascript">
+				/* HTML Chords (https://github.com/ostankin/html-chords) - 02.04.2016 */
+				function guitar_chord_writer() {
+					this.notes =     ["C",  "C#", "C#", "D",  "D#", "D#", "E",  "F",  "F#", "F#", "G",  "G#", "G#", "A",  "A#", "A#", "B",  "Bb", "B"];
+					this.upnotes =   ["C#", "D",  "D",  "D#", "E",  "E",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "A#", "B",  "B",  "C",  "H",  "H"];
+					this.downnotes = ["B",  "C",  "C",  "C#", "D",  "D",  "D#", "E",  "F",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "A#", "A",  "A"];
+
+					this.transpositionHandler = function(oDiv, t_up) {
+						var oSong = oDiv.parent().parent("div.song");
+						var oThis = this;
+						var oChords = oSong.find("span.chord, span.chord-inline").each(function(index) {
+							var chord = $(this).text();
+							var new_chord = "";
+							var i = 0;
+							var last_note_end = 0;
+							while (i<chord.length) {
+								var found_note = "";
+								var replacement_note = "";
+								for (n=0;n<oThis.notes.length;++n) {
+									var note = oThis.notes[n];
+									var match = chord.substr(i, note.length) == note;
+					// find the longest match (i.e. C# rahter than C)
+					if (match && note.length > found_note.length) {
+						found_note = note;
+						replacement_note = t_up?oThis.upnotes[n]:oThis.downnotes[n];
+					}
+				}
+				if (found_note != "") {
+					new_chord += chord.substr(last_note_end, i - last_note_end);
+					new_chord += replacement_note;
+					last_note_end = i + found_note.length;
+					i += found_note.length;
+				} else
+				++i;
+
+			}
+			if (chord.length > last_note_end)
+				new_chord += chord.substr(last_note_end);
+			$(this).text(new_chord);
+		});
+					};
+
+					this.init = function(transposition_text, up, down) {
+
+						var tclass = "transposition";
+						var cclass = "chord";
+						var song_processed_class = "song-transposition-processed";
+						var song_selector = "div.song:not(." + song_processed_class + ")";
+						var oThis = this;
+
+						$(song_selector).each(function(index){
+							var s = $(this).html();
+							s = s.replace(/\{\s+\}/g, function(x) {
+								var r = "";
+								for(var i=2;i<x.length;i++)
+									r += "&nbsp; ";
+								return r;
+							});
+							s = s.replace(/\{_/g, "<span class='chord-inline'>");
+							s = s.replace(/\{/g, "<span class='chord'>");
+							s = s.replace(/\}/g, "</span>");
+							$(this).html(s);
+						});
+
+						$(song_selector + " span.chord").each(function(index){
+							var s = $(this).html();
+							s = s.replace(/[ ]/g, " &nbsp; ");
+							$(this).html(s);
+						});
+
+						$("<span>" + transposition_text + ": </span>").appendTo($(song_selector + " div"));
+						$("<a>").attr("href","#").addClass(tclass).text(up).appendTo($(song_selector + " div"));
+						$("<a>").attr("href","#").addClass(tclass).text(down).appendTo($(song_selector + " div"));
+						$(song_selector + " div a." + tclass + ":contains(" + up + ")").click(function(){oThis.transpositionHandler($(this),true); return false;});
+						$(song_selector + " div a." + tclass + ":contains(" + down + ")").click(function(){oThis.transpositionHandler($(this),false); return false;});
+
+
+						$(song_selector).each(function () {
+							$(this).addClass(song_processed_class);
+						});
+					}
+				}
+
+
+				$(document).ready(function() {
+
+					var gcwriter = new guitar_chord_writer();
+					var lang = $("head script#html-chords-script").attr("lang");
+					switch (lang) {
+						case "ru":
+						gcwriter.init("Изменить тональность", "на полтона вверх", "на полтона вниз");
+						default:
+						gcwriter.init("Transpose", "up a halftone", "down a halftone");
+					}
+				});
+
+			</script>
+		</body>
+		</html>
