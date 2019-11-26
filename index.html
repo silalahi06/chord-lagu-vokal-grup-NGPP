@@ -3,6 +3,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/LogoGPP.jpg">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
 	<style type="text/css">
 		body {	
 			font-family: Verdana, Arial, sans-serif;
@@ -33,7 +34,7 @@
 	</head>
 	<body>
 
-
+<input oninput="w3.filterHTML('#id01', 'li', this.value)" placeholder="Cari">
 
 		<div class="song">
 
@@ -41,7 +42,7 @@
 
 
 			<h3>Daftar Chord Lagu Vokal Grup NGPP</h3>
-			<ol>
+			<ol id="id01">
 				<li><a href="lagu/terimakasih-yesus.html" target="_blank">Terimakasih Yesus</a></li>
 				<li><a href="lagu/ajaib-kau-yesus.html" target="_blank">Ajaib Kau Yesus</a></li>
 				<li><a href="lagu/kau-allah-yang-besar.htm" target="_blank">Kau Allah Yang Besar</a></li>
