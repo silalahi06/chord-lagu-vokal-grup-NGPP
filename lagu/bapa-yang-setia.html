@@ -1,0 +1,208 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style type="text/css">
+		body {	
+			font-family: Verdana, Arial, sans-serif;
+			font-size: .8em;
+			background-color: black;
+			color: white;
+		}
+		html {
+			user-select: none;	
+		}
+		div.song > p {line-height:2;margin:15px 0px 15px 0px;}
+		span.chord {position:absolute;line-height:0;font-weight:bold;}
+		span.chord-inline {font-weight:bold;}
+		div.transposition a.transposition {margin:5px; color: white}
+		div.song div.transposition {margin-bottom:5px;}
+
+		p {
+			line-height: 17px;
+			margin: 11px 0 10px 0;
+			padding: 0px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Bapa Yang Setia</h3>
+
+
+	<div class="song">
+
+		<div class="transposition"></div>
+
+
+		<p>{_A-}{_A-}{_G-}{_F#m-}{_G-}{_D}{ }{_F#m}{ }{_Bm}{ }{_F#m}</p>
+		<p style="margin-top: -20px;">{_F#m-}{_A-}{_G}{ }{_F#m}{ }{_Bm}{ }{_Em}{ }{_A}{ }{_D}{ }{_A7}{ }{_D}</p>
+
+		<p>
+			{D}Kau yang selal{A}u mengasihiku{Bm}<br>
+
+			Dengan k{G}asih ya{A}ng kek{D}al<br>
+
+			{D}Pengorbanan{A}Mu membuatk{C}u meras{G/B}a<br>
+
+			Berha{Em}rga di m{A}ataM{D}u<br>
+		</p>
+
+		<p>
+			{D}Kau yang selal{A}u menyayangiku{Bm}<br>
+
+			Dengan k{G}asih ya{A}ng sungg{D}uh<br>
+
+			{D}Kehadiran{A}Mu membuatk{C}u mengert{G/B}i<br>
+
+			Arti {Em}kehidu{A}pank{D}u<br>
+
+			<b>- Reff</b>
+		</p>	
+
+		<p>
+			{A}Kau{A} Tuh{G}an{ }{F#m}a{    }{G}dala{D}h Bapa yang set{F#m}ia<br>
+
+			<u>Tia</u>da sek{Bm}alipun ku ditingga{F#m}lkan<br>
+
+			{G}Penghiburan yang ku{F#m}rinduk{Bm}an<br>
+
+			S{C}elalu Kau se<u>dia</u>k{A}an<br>
+		</p>
+
+		<p>
+			{A}S'la{A}man{G}ya { }{F#m}ku{   }{G}semb{D}ah Bapa yang se{F#m}tia<br>
+
+			Tak kan Kau bi{Bm}arkan ku terpisa{F#m}hkan<br>
+
+			{F#m-}Ye{   }{A}sus, Ka{G}ulah sumber pert{F#m}olongank{Bm}u<br>
+
+			{Em}Yang dapat {A}ku percaya{D}{   }{(G intro)}
+
+		</p>	
+
+		<p style="margin-top: -10px;">
+			{_G}{ }{_Gm}{ }{_F#m}{ }{_A#m-}{_Bm}{ }{_A}<br>
+			{_G}{ }{_Gm}{ }{_F#m-}{_G-}{_A}{ }{_A7}{ }{_D}<br>
+		</p>
+		<p style="margin-top: -10px;">
+			<b>- Song 2, Reff</b>
+		</p>
+		<p style="margin-top: -10px;">
+			{_D}{ }{_Em}{ }{_F#m}{ }{_A}{ }{_B}<br>
+		</p>
+		<p style="margin-top: -10px;">
+			<b>- Reff Overtone</b>
+		</p>
+		<p style="margin-top: -10px;">
+			<b>- Ending</b>
+		</p>
+		<p>
+			{G#m-}Ye{   }{B}sus, Ka{A}ulah sumber pert{G#m}olongank{C#m}u<br>
+
+			{F#m}Yang dapat {B}ku percaya{E}
+		</p>	
+		<p style="margin-top: -10px;">
+			{_A}{ }{_Am}{ }{_B-}{_F#m-}{_E}<br>
+		</p>
+
+
+	</div>
+	<script type="text/javascript">
+		/* HTML Chords (https://github.com/ostankin/html-chords) - 02.04.2016 */
+		function guitar_chord_writer() {
+			this.notes =     ["C",  "C#", "C#", "D",  "D#", "D#", "E",  "F",  "F#", "F#", "G",  "G#", "G#", "A",  "A#", "A#", "B",  "Bb", "B"];
+			this.upnotes =   ["C#", "D",  "D",  "D#", "E",  "E",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "A#", "B",  "B",  "C",  "H",  "H"];
+			this.downnotes = ["B",  "C",  "C",  "C#", "D",  "D",  "D#", "E",  "F",  "F",  "F#", "G",  "G",  "G#", "A",  "A",  "A#", "A",  "A"];
+
+			this.transpositionHandler = function(oDiv, t_up) {
+				var oSong = oDiv.parent().parent("div.song");
+				var oThis = this;
+				var oChords = oSong.find("span.chord, span.chord-inline").each(function(index) {
+					var chord = $(this).text();
+					var new_chord = "";
+					var i = 0;
+					var last_note_end = 0;
+					while (i<chord.length) {
+						var found_note = "";
+						var replacement_note = "";
+						for (n=0;n<oThis.notes.length;++n) {
+							var note = oThis.notes[n];
+							var match = chord.substr(i, note.length) == note;
+					// find the longest match (i.e. C# rahter than C)
+					if (match && note.length > found_note.length) {
+						found_note = note;
+						replacement_note = t_up?oThis.upnotes[n]:oThis.downnotes[n];
+					}
+				}
+				if (found_note != "") {
+					new_chord += chord.substr(last_note_end, i - last_note_end);
+					new_chord += replacement_note;
+					last_note_end = i + found_note.length;
+					i += found_note.length;
+				} else
+				++i;
+
+			}
+			if (chord.length > last_note_end)
+				new_chord += chord.substr(last_note_end);
+			$(this).text(new_chord);
+		});
+			};
+
+			this.init = function(transposition_text, up, down) {
+
+				var tclass = "transposition";
+				var cclass = "chord";
+				var song_processed_class = "song-transposition-processed";
+				var song_selector = "div.song:not(." + song_processed_class + ")";
+				var oThis = this;
+
+				$(song_selector).each(function(index){
+					var s = $(this).html();
+					s = s.replace(/\{\s+\}/g, function(x) {
+						var r = "";
+						for(var i=2;i<x.length;i++)
+							r += "&nbsp; ";
+						return r;
+					});
+					s = s.replace(/\{_/g, "<span class='chord-inline'>");
+					s = s.replace(/\{/g, "<span class='chord'>");
+					s = s.replace(/\}/g, "</span>");
+					$(this).html(s);
+				});
+
+				$(song_selector + " span.chord").each(function(index){
+					var s = $(this).html();
+					s = s.replace(/[ ]/g, " &nbsp; ");
+					$(this).html(s);
+				});
+
+				$("<span>" + transposition_text + ": </span>").appendTo($(song_selector + " div"));
+				$("<a>").attr("href","#").addClass(tclass).text(up).appendTo($(song_selector + " div"));
+				$("<a>").attr("href","#").addClass(tclass).text(down).appendTo($(song_selector + " div"));
+				$(song_selector + " div a." + tclass + ":contains(" + up + ")").click(function(){oThis.transpositionHandler($(this),true); return false;});
+				$(song_selector + " div a." + tclass + ":contains(" + down + ")").click(function(){oThis.transpositionHandler($(this),false); return false;});
+
+
+				$(song_selector).each(function () {
+					$(this).addClass(song_processed_class);
+				});
+			}
+		}
+
+
+		$(document).ready(function() {
+
+			var gcwriter = new guitar_chord_writer();
+			var lang = $("head script#html-chords-script").attr("lang");
+			switch (lang) {
+				case "ru":
+				gcwriter.init("Изменить тональность", "на полтона вверх", "на полтона вниз");
+				default:
+				gcwriter.init("Transpose", "up a halftone", "down a halftone");
+			}
+		});
+
+	</script>
+</body>
+</html>
